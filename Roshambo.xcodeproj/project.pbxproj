@@ -14,6 +14,7 @@
 		352CACCA1B39FAF000DF3C4D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 352CACC81B39FAF000DF3C4D /* LaunchScreen.xib */; };
 		352CACD61B39FAF100DF3C4D /* RoshamboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352CACD51B39FAF100DF3C4D /* RoshamboTests.swift */; };
 		352CACE01B3A22E600DF3C4D /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352CACDF1B3A22E600DF3C4D /* ResultController.swift */; };
+		B2EB74511B3A3E1200D8A2B9 /* RPSEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EB74501B3A3E1200D8A2B9 /* RPSEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		352CACD41B39FAF000DF3C4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		352CACD51B39FAF100DF3C4D /* RoshamboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshamboTests.swift; sourceTree = "<group>"; };
 		352CACDF1B3A22E600DF3C4D /* ResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
+		B2EB74501B3A3E1200D8A2B9 /* RPSEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPSEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				352CACC61B39FAF000DF3C4D /* Images.xcassets */,
 				352CACC81B39FAF000DF3C4D /* LaunchScreen.xib */,
 				352CACBD1B39FAF000DF3C4D /* Supporting Files */,
+				B2EB74501B3A3E1200D8A2B9 /* RPSEnum.swift */,
 			);
 			path = Roshambo;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				352CACC21B39FAF000DF3C4D /* ViewController.swift in Sources */,
 				352CACC01B39FAF000DF3C4D /* AppDelegate.swift in Sources */,
+				B2EB74511B3A3E1200D8A2B9 /* RPSEnum.swift in Sources */,
 				352CACE01B3A22E600DF3C4D /* ResultController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +417,7 @@
 				352CACDB1B39FAF100DF3C4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		352CACDC1B39FAF100DF3C4D /* Build configuration list for PBXNativeTarget "RoshamboTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				352CACDE1B39FAF100DF3C4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,18 +7,22 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>7AFEAC00-5C22-49A2-981E-4A08567452D6</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Roshambo</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>10FBFA39B25953C52BFBEDE73EB8DB01D3B4DF38</key>
 		<string>https://github.com/amitkumar0206/Roshambo.git</string>
+		<key>400FAF67EEC135A44A2AE798AB61BE44579A1BF7</key>
+		<string>https://github.com/amitkumar0206/ColorMaker.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Roshambo.xcodeproj</string>
+	<string>Roshambo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>10FBFA39B25953C52BFBEDE73EB8DB01D3B4DF38</key>
 		<string>../..</string>
+		<key>400FAF67EEC135A44A2AE798AB61BE44579A1BF7</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/amitkumar0206/Roshambo.git</string>
@@ -28,6 +32,14 @@
 	<string>10FBFA39B25953C52BFBEDE73EB8DB01D3B4DF38</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>400FAF67EEC135A44A2AE798AB61BE44579A1BF7</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

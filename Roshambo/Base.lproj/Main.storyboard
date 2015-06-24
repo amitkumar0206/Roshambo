@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E36b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -23,6 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="paperClicked" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EHl-Ox-lRY"/>
                                     <segue destination="42s-6I-HuQ" kind="presentation" identifier="resultSegue" id="k0n-u8-TZq"/>
                                 </connections>
                             </button>
@@ -40,10 +41,13 @@
                                 <state key="normal" image="scissors">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="42s-6I-HuQ" kind="presentation" identifier="scissorsSegue" id="9h7-uV-8lS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfW-Pm-RTw">
-                                <rect key="frame" x="112" y="274" width="85" height="30"/>
-                                <state key="normal" title="Lets Play!!">
+                                <rect key="frame" x="62" y="274" width="207" height="30"/>
+                                <state key="normal" title="Choose an Image to play!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -58,9 +62,13 @@
                             <constraint firstItem="mWw-WX-n42" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="113" id="kkt-lW-atm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="42s-6I-HuQ" kind="presentation" identifier="paperSegue" id="NZl-Ry-01y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="388" y="382"/>
         </scene>
         <!--Result Controller-->
         <scene sceneID="9bP-i6-r02">
@@ -74,20 +82,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r38-M9-dQr">
-                                <rect key="frame" x="37" y="39" width="308" height="319"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r38-M9-dQr">
+                                <rect key="frame" x="16" y="39" width="270" height="290"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zp9-aX-T8K">
-                                <rect key="frame" x="72" y="432" width="286" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zp9-aX-T8K">
+                                <rect key="frame" x="59" y="392" width="286" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1p-It-q8h">
+                                <rect key="frame" x="118" y="469" width="128" height="30"/>
+                                <state key="normal" title="Play Again!!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgain:" destination="42s-6I-HuQ" eventType="touchUpInside" id="jq6-nd-vvL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="r38-M9-dQr" firstAttribute="leading" secondItem="veG-HU-0Rg" secondAttribute="leadingMargin" constant="21" id="OLK-TW-bw8"/>
-                            <constraint firstItem="zp9-aX-T8K" firstAttribute="leading" secondItem="veG-HU-0Rg" secondAttribute="leadingMargin" constant="57" id="saL-u8-pY3"/>
+                            <constraint firstItem="c1p-It-q8h" firstAttribute="leading" secondItem="veG-HU-0Rg" secondAttribute="leadingMargin" constant="100" id="Mjh-5G-yMO"/>
+                            <constraint firstItem="c1p-It-q8h" firstAttribute="top" secondItem="cge-Sl-I3d" secondAttribute="bottom" constant="448" id="SiX-vS-OPh"/>
+                            <constraint firstItem="zp9-aX-T8K" firstAttribute="leading" secondItem="veG-HU-0Rg" secondAttribute="leadingMargin" constant="5" id="T2b-Wz-5Eu"/>
+                            <constraint firstItem="zp9-aX-T8K" firstAttribute="top" secondItem="cge-Sl-I3d" secondAttribute="bottom" constant="372" id="ZaA-89-JCq"/>
                         </constraints>
                     </view>
                     <connections>
@@ -97,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sar-Jz-gMF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1122" y="604"/>
+            <point key="canvasLocation" x="1105" y="387"/>
         </scene>
     </scenes>
     <resources>
@@ -105,4 +124,7 @@
         <image name="rock" width="37" height="32"/>
         <image name="scissors" width="37" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9h7-uV-8lS"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -38,6 +38,24 @@ class ViewController: UIViewController {
         controller.opponentChoice = generateOpponentPlay()
         presentViewController(controller, animated: true, completion: nil)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let controller = segue.destinationViewController as! ResultController
+        
+        if (segue.identifier == "paperSegue") {
+            controller.playerChoice = RPSEnum.PAPER
+        }
+        else{
+            controller.playerChoice = RPSEnum.SCISSORS
+        }
+        controller.opponentChoice = generateOpponentPlay()
+        
+    }
+    
+    @IBAction func paperClicked() {
+        performSegueWithIdentifier("paperSegue", sender: self)
+    
+    }
 
 }
 

@@ -57,4 +57,7 @@ class ResultController: UIViewController {
     }
     
     
+    @IBAction func playAgain(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }

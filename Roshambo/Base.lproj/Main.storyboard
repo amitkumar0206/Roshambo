@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooQ-Se-aK6">
-                                <rect key="frame" x="136" y="46" width="37" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooQ-Se-aK6">
+                                <rect key="frame" x="111" y="46" width="81" height="75"/>
                                 <state key="normal" image="paper">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -27,8 +27,8 @@
                                     <segue destination="42s-6I-HuQ" kind="presentation" identifier="resultSegue" id="k0n-u8-TZq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jL-zW-Dji">
-                                <rect key="frame" x="46" y="133" width="37" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jL-zW-Dji">
+                                <rect key="frame" x="116" y="206" width="70" height="65"/>
                                 <state key="normal" image="rock">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -36,8 +36,14 @@
                                     <action selector="rockClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zw8-22-KNN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWw-WX-n42">
-                                <rect key="frame" x="253" y="133" width="37" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfW-Pm-RTw">
+                                <rect key="frame" x="53" y="458" width="207" height="30"/>
+                                <state key="normal" title="Choose an Image to play!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWw-WX-n42">
+                                <rect key="frame" x="122" y="342" width="58" height="77"/>
                                 <state key="normal" image="scissors">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -45,22 +51,8 @@
                                     <segue destination="42s-6I-HuQ" kind="presentation" identifier="scissorsSegue" id="9h7-uV-8lS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfW-Pm-RTw">
-                                <rect key="frame" x="62" y="274" width="207" height="30"/>
-                                <state key="normal" title="Choose an Image to play!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ooQ-Se-aK6" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="26" id="2pB-H7-BbT"/>
-                            <constraint firstItem="6jL-zW-Dji" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="BfB-QG-lBQ"/>
-                            <constraint firstItem="mWw-WX-n42" firstAttribute="leading" secondItem="6jL-zW-Dji" secondAttribute="trailing" constant="170" id="Iyj-j2-05p"/>
-                            <constraint firstItem="6jL-zW-Dji" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="113" id="Klc-Dq-djZ"/>
-                            <constraint firstItem="ooQ-Se-aK6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="120" id="MkB-Jj-JI7"/>
-                            <constraint firstItem="mWw-WX-n42" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="113" id="kkt-lW-atm"/>
-                        </constraints>
                     </view>
                     <connections>
                         <segue destination="42s-6I-HuQ" kind="presentation" identifier="paperSegue" id="NZl-Ry-01y"/>
@@ -85,8 +77,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r38-M9-dQr">
                                 <rect key="frame" x="16" y="39" width="270" height="290"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zp9-aX-T8K">
-                                <rect key="frame" x="59" y="392" width="286" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zp9-aX-T8K">
+                                <rect key="frame" x="59" y="392" width="286" height="74"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -105,7 +97,7 @@
                         <constraints>
                             <constraint firstItem="c1p-It-q8h" firstAttribute="leading" secondItem="veG-HU-0Rg" secondAttribute="leadingMargin" constant="100" id="Mjh-5G-yMO"/>
                             <constraint firstItem="c1p-It-q8h" firstAttribute="top" secondItem="cge-Sl-I3d" secondAttribute="bottom" constant="448" id="SiX-vS-OPh"/>
-                            <constraint firstItem="zp9-aX-T8K" firstAttribute="leading" secondItem="veG-HU-0Rg" secondAttribute="leadingMargin" constant="5" id="T2b-Wz-5Eu"/>
+                            <constraint firstItem="zp9-aX-T8K" firstAttribute="leading" secondItem="veG-HU-0Rg" secondAttribute="leadingMargin" constant="45" id="T2b-Wz-5Eu"/>
                             <constraint firstItem="zp9-aX-T8K" firstAttribute="top" secondItem="cge-Sl-I3d" secondAttribute="bottom" constant="372" id="ZaA-89-JCq"/>
                         </constraints>
                     </view>
@@ -120,9 +112,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="paper" width="37" height="32"/>
-        <image name="rock" width="37" height="32"/>
-        <image name="scissors" width="37" height="32"/>
+        <image name="paper" width="81" height="75"/>
+        <image name="rock" width="70" height="65"/>
+        <image name="scissors" width="58" height="77"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9h7-uV-8lS"/>

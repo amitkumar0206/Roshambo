@@ -30,29 +30,30 @@ class ResultController: UIViewController {
         var imageString : String!
         
         if (playerChoice == opponentChoice) {
-            message = "Its a TIE.... Try Again!!"
+            message = "Its a TIE. Try Again!!"
             imageString = "ItsATie"
         } else if (playerChoice == RPSEnum.PAPER &&  opponentChoice == RPSEnum.ROCK) {
-            message = "You WIN! Paper Covers the Rock!!"
+            message = "You WIN! \nPaper Covers the Rock!!"
             imageString = "PaperCoversRock"
         } else if (playerChoice == RPSEnum.ROCK &&  opponentChoice == RPSEnum.PAPER) {
-            message = "You LOSE! Paper Covers the Rock!!"
+            message = "You LOSE! \nPaper Covers the Rock!!"
             imageString = "PaperCoversRock"
         } else if (playerChoice == RPSEnum.SCISSORS &&  opponentChoice == RPSEnum.PAPER) {
-            message = "You WIN! Scissors Cuts the Paper!!"
+            message = "You WIN! \nScissors Cuts the Paper!!"
             imageString = "ScissorsCutPaper"
         } else if (playerChoice == RPSEnum.PAPER &&  opponentChoice == RPSEnum.SCISSORS) {
-            message = "You LOSE! Scissors Cuts the Paper!!"
+            message = "You LOSE! \nScissors Cuts the Paper!!"
             imageString = "ScissorsCutPaper"
         }else if (playerChoice == RPSEnum.ROCK &&  opponentChoice == RPSEnum.SCISSORS) {
-            message = "You WIN! Rock Crushes the Scissors!!"
+            message = "You WIN! \nRock Crushes the Scissors!!"
             imageString = "RockCrushesScissors"
         } else if (playerChoice == RPSEnum.SCISSORS &&  opponentChoice == RPSEnum.ROCK) {
-            message = "You LOSE! Rock Crushes the Scissors!!"
+            message = "You LOSE! \nRock Crushes the Scissors!!"
             imageString = "RockCrushesScissors"
         }
         
         labelOutlet.text = message
+        labelOutlet.textAlignment = .Center;
         imageView.image = UIImage(named: imageString)
     }
     
